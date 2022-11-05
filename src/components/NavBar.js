@@ -3,14 +3,23 @@ import { useState , useEffect } from "react";
 import { Container,Navbar,Nav } from 'react-bootstrap';
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
-import navIcon2 from '../assets/img/nav-icon2.svg';
-import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon2 from '../assets/img/icon-codeforces.svg';
+import navIcon3 from '../assets/img/icon-github.svg';
+import navIcon4 from '../assets/img/icon-leetcode.svg';
+import navIcon5 from '../assets/img/icon-codechef.svg';
+
+
+
 
 
  export const NavBar = () => {
 
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled , seScrolled] = useState(false);
+  const onUpdateActiveLink = (value) =>
+  {
+    setActiveLink(value);
+  }
 
   useEffect (()=>{
     const onScroll =() =>{
@@ -26,10 +35,7 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
 
     },[])
 
-    const onUpdateActiveLink = (value) =>
-    {
-      setActiveLink(value);
-    }
+   
 
   return (
     <Navbar expand="lg"  className={scrolled ? "scrolled ": ""}>
@@ -54,8 +60,10 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
             <a href="#"><img src={navIcon1} alt="" /></a>
             <a href="#"><img src={navIcon2} alt="" /></a>
             <a href="#"><img src={navIcon3} alt="" /></a>
+            <a href="#"><img src={navIcon4} alt="" /></a>
+            <a href="#"><img src={navIcon5} alt="" /></a>
           </div>
-          <button className="vvd" onClick={ ()=> console.log('connect')}></button><span>Lets connect </span>
+          <button className="vvd" onClick={ ()=> console.log('connect')}><span>Lets connect </span></button>
         </span>
       </Navbar.Collapse>
     </Container>
