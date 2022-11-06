@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState , useEffect } from "react";
 import { Container,Navbar,Nav } from 'react-bootstrap';
-import logo from '../assets/img/logo.svg';
+import logo from '../assets/img/icon-ajeet.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/icon-codeforces.svg';
 import navIcon3 from '../assets/img/icon-github.svg';
@@ -62,6 +62,7 @@ import navIcon5 from '../assets/img/icon-codechef.svg';
             <a href="#"><img src={navIcon3} alt="" /></a>
             <a href="#"><img src={navIcon4} alt="" /></a>
             <a href="#"><img src={navIcon5} alt="" /></a>
+            
           </div>
           <button className="vvd" onClick={ ()=> console.log('connect')}><span>Lets connect </span></button>
         </span>
